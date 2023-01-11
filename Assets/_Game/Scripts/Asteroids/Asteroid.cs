@@ -58,7 +58,6 @@ namespace Asteroids
                 Destroy(gameObject);
             }
         }
-        
         public void OnHitByLaserInt(int asteroidId)
         {
             if (_instanceId == asteroidId)
