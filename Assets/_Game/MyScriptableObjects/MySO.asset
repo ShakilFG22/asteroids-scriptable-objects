@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f519c39c0d441084d9ff1266cf204366, type: 3}
   m_Name: MySO
   m_EditorClassIdentifier: 
-  soMaxValue: 30
+  _minSpawnTime: 1
+  _maxSpawnTime: 4
+  _minAmount: 1
+  _maxAmount: 2
+  _minForce: 2
+  _maxForce: 6
+  _minSize: 0.2
+  _maxSize: 1
+  _minTorque: 0.1
+  _maxTorque: 0.5
