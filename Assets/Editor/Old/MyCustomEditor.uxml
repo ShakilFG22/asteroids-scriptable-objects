@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/StyleSheet.uss?fileID=7433441132597879392&amp;guid=d4f903725fbdb214e94a4236042d448c&amp;type=3#StyleSheet" />
+    <ui:VisualElement style="height: 100%; width: 100%; align-items: center; justify-content: flex-start; background-image: none;">
+        <ui:VisualElement name="Logo" style="width: 70%; height: 35%; justify-content: flex-start;" />
+        <ui:VisualElement name="Items" style="flex-shrink: 1; flex-grow: 1; width: 50%; height: auto;">
+            <ui:Label text="Pause Menu" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-style: bold;" />
+            <ui:Button text="Button" display-tooltip-when-elided="true" class="Pause-Button" style="font-size: 42px;" />
+            <ui:VisualElement name="OptionsContainer" class="Hide" style="opacity: 1; display: flex;">
+                <ui:SliderInt picking-mode="Ignore" label="Value" value="42" high-value="100" show-input-field="true" inverted="false" name="VolumeSlider" focusable="true" usage-hints="None" style="font-size: 28px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Down">
+                <ui:Label text="Label" display-tooltip-when-elided="true" style="font-size: 28px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
