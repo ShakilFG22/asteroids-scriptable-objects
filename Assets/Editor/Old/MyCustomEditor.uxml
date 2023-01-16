@@ -1,15 +1,23 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/Editor/StyleSheet.uss?fileID=7433441132597879392&amp;guid=d4f903725fbdb214e94a4236042d448c&amp;type=3#StyleSheet" />
-    <ui:VisualElement style="height: 100%; width: 100%; align-items: center; justify-content: flex-start; background-image: none;">
-        <ui:VisualElement name="Logo" style="width: 70%; height: 35%; justify-content: flex-start;" />
-        <ui:VisualElement name="Items" style="flex-shrink: 1; flex-grow: 1; width: 50%; height: auto;">
-            <ui:Label text="Pause Menu" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-style: bold;" />
-            <ui:Button text="Button" display-tooltip-when-elided="true" class="Pause-Button" style="font-size: 42px;" />
-            <ui:VisualElement name="OptionsContainer" class="Hide" style="opacity: 1; display: flex;">
-                <ui:SliderInt picking-mode="Ignore" label="Value" value="42" high-value="100" show-input-field="true" inverted="false" name="VolumeSlider" focusable="true" usage-hints="None" style="font-size: 28px;" />
+    <Style src="project://database/Assets/Editor/Old/StyleSheet.uss?fileID=7433441132597879392&amp;guid=d4f903725fbdb214e94a4236042d448c&amp;type=3#StyleSheet" />
+    <ui:VisualElement style="height: 1080px; width: 1920px; align-items: center; justify-content: flex-start; background-image: none;">
+        <ui:VisualElement name="Body" style="height: 1244px; width: 1917px;">
+            <ui:Label text="Pause Menu&#10;" display-tooltip-when-elided="true" name="MenuHeader" enable-rich-text="true" style="height: 96px; align-items: flex-start; justify-content: flex-start; font-size: 54px; -unity-text-align: upper-center; white-space: normal; -unity-font-style: bold; width: 1920px;" />
+            <ui:VisualElement name="ConfigAsteroidSpawner" style="height: 497px; font-size: 44px;">
+                <ui:Label text="Configure Asteroid Spawner" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinSpawnTime" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MaxSpawnTime" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinAmount" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MaxAmount" style="align-items: center; width: 1533px;" />
             </ui:VisualElement>
-            <ui:VisualElement name="Down">
-                <ui:Label text="Label" display-tooltip-when-elided="true" style="font-size: 28px;" />
+            <ui:VisualElement name="ConfigAsteroid" style="height: 980px; font-size: 44px;">
+                <ui:Label text="Configure Asteroid " display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinForce" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MaxForce" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinSize" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MaxSize" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinTorque" style="align-items: center; width: 1533px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MaxTorque" style="align-items: center; width: 1533px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
