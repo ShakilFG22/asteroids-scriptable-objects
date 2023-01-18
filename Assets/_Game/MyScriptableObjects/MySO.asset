@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f519c39c0d441084d9ff1266cf204366, type: 3}
   m_Name: MySO
   m_EditorClassIdentifier: 
-  _minSpawnTime: 1
+  _minSpawnTime: 10
   _maxSpawnTime: 4
   _minAmount: 1
   _maxAmount: 2
