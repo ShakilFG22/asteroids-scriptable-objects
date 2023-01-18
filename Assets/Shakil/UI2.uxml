@@ -1,0 +1,63 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="height: 1080px; width: 1920px; align-items: center; justify-content: flex-start; background-image: none;">
+        <ui:VisualElement name="Body" style="height: 1244px; width: 1917px;">
+            <ui:Label text="Pause Menu&#10;" display-tooltip-when-elided="true" name="MenuHeader" enable-rich-text="true" style="height: 96px; align-items: flex-start; justify-content: flex-start; font-size: 54px; -unity-text-align: upper-center; white-space: normal; -unity-font-style: bold; width: 1920px;" />
+            <ui:VisualElement name="ConfigAsteroidSpawner" style="height: 639px; font-size: 44px;">
+                <ui:Label text="Configure Asteroid Spawner" display-tooltip-when-elided="true" name="ConfigureLabel" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:Label text="Min Spawn Time " display-tooltip-when-elided="true" name="MinSpawnTime" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" name="IncMinST" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" name="MinST" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" name="DecMinST" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Max Spawn Time " display-tooltip-when-elided="true" name="MaxSpawnTime" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Min Amount " display-tooltip-when-elided="true" name="MinAmount" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Max Amount " display-tooltip-when-elided="true" name="MaxAmount" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+            </ui:VisualElement>
+            <ui:VisualElement name="ConfigAsteroid" style="height: 980px; font-size: 44px; display: flex;">
+                <ui:Label text="Configure Asteroid " display-tooltip-when-elided="true" name="ConfigureAsteroid" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:Label text="Min Force " display-tooltip-when-elided="true" name="MinForce" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Max Force " display-tooltip-when-elided="true" name="MaxForce" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Min Size " display-tooltip-when-elided="true" name="MinSize" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Max Size " display-tooltip-when-elided="true" name="MaxSize" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Min Torque " display-tooltip-when-elided="true" name="MinTorque" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+                <ui:Label text="Max Torque " display-tooltip-when-elided="true" name="MaxTorque" style="height: 58px;">
+                    <ui:Button text="+" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 713px; font-size: 77px; position: relative;" />
+                    <ui:Label text="0" display-tooltip-when-elided="true" style="transform-origin: center; left: 789px; top: -49px; width: 38px;" />
+                    <ui:Button text="-" display-tooltip-when-elided="true" style="align-items: stretch; width: 69px; height: 50px; justify-content: flex-start; white-space: normal; -unity-text-align: middle-center; display: flex; visibility: visible; left: 850px; font-size: 77px; top: -107px;" />
+                </ui:Label>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

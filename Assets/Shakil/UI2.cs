@@ -4,13 +4,13 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 
 
-public class MyCustomEditor : EditorWindow
+public class UI2 : EditorWindow
 {
-    [MenuItem("Window/UI Toolkit/MyCustomEditor")]
+    [MenuItem("Window/UI Toolkit/UI2")]
     public static void ShowExample()
     {
-        MyCustomEditor wnd = GetWindow<MyCustomEditor>();
-        wnd.titleContent = new GUIContent("MyCustomEditor");
+        UI2 wnd = GetWindow<UI2>();
+        wnd.titleContent = new GUIContent("UI2");
     }
 
     public void CreateGUI()
@@ -23,7 +23,7 @@ public class MyCustomEditor : EditorWindow
         root.Add(label);
 
         // Import UXML
-        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/MyCustomEditor.uxml");
+        var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UI2.uxml");
         VisualElement labelFromUXML = visualTree.Instantiate();
         root.Add(labelFromUXML);
     }
