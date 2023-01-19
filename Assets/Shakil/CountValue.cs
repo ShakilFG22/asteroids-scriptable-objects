@@ -9,9 +9,6 @@ using Debug = UnityEngine.Debug;
 public class CountValue : MonoBehaviour
 {
 
-    // private Label  counterLabel;
-    // private Button counterButtonPlus;
-    // private Button counterButtonMinus;
 
     private Label [] counterLabels = new Label [10];
     private Button[] counterButton = new Button[20];
@@ -19,27 +16,6 @@ public class CountValue : MonoBehaviour
     private float[] count = new float[10];
     [SerializeField] private MySO _mySo;
     
-    
-
-    // [SerializeField] private GameObject _gameObject;
-    // private void Start()
-    // {
-    //     _gameObject.SetActive(false);
-    // }
-    //
-    // void Update()
-    // {
-    //     if (!_gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-    //     {
-    //         Debug.Log("ESC1");
-    //         _gameObject.SetActive(true);
-    //     }
-    //     else if ( _gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
-    //     {
-    //         _gameObject.SetActive(false);
-    //         Debug.Log("ESC2");
-    //     }
-    // }
 
     private void OnEnable()
     {
@@ -98,9 +74,7 @@ public class CountValue : MonoBehaviour
         // counterButton[17].RegisterCallback<ClickEvent>(ev => IncrementCounter(8));
         counterButton[18].RegisterCallback<ClickEvent>(ev => IncrementCounter(9));
         counterButton[19].RegisterCallback<ClickEvent>(ev => DecrementCounter(9));
-        
     }
-
     
     private void IncrementCounter(int value)
     {
