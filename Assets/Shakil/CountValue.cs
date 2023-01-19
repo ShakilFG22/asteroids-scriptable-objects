@@ -20,6 +20,27 @@ public class CountValue : MonoBehaviour
     [SerializeField] private MySO _mySo;
     
     
+
+    // [SerializeField] private GameObject _gameObject;
+    // private void Start()
+    // {
+    //     _gameObject.SetActive(false);
+    // }
+    //
+    // void Update()
+    // {
+    //     if (!_gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         Debug.Log("ESC1");
+    //         _gameObject.SetActive(true);
+    //     }
+    //     else if ( _gameObject.activeSelf && Input.GetKeyDown(KeyCode.Escape))
+    //     {
+    //         _gameObject.SetActive(false);
+    //         Debug.Log("ESC2");
+    //     }
+    // }
+
     private void OnEnable()
     {
         VisualElement rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
@@ -30,10 +51,10 @@ public class CountValue : MonoBehaviour
         counterLabels[3] = rootVisualElement.Q<Label>("MaxAm");
         counterLabels[4] = rootVisualElement.Q<Label>("MinFor");
         counterLabels[5] = rootVisualElement.Q<Label>("MaxFor");
-        counterLabels[6] = rootVisualElement.Q<Label>("MinSiz");
-        // counterLabels[7] = rootVisualElement.Q<Label>("MaxSiz");
+        // counterLabels[6] = rootVisualElement.Q<Label>("MinSiz");
+        counterLabels[7] = rootVisualElement.Q<Label>("MaxSiz");
         // counterLabels[8] = rootVisualElement.Q<Label>("MaxST");
-        // counterLabels[9] = rootVisualElement.Q<Label>("MaxST");
+        counterLabels[9] = rootVisualElement.Q<Label>("MaxTor");
         
         counterButton[ 0] = rootVisualElement.Q<Button>("IncMinST");
         counterButton[ 1] = rootVisualElement.Q<Button>("DecMinST");
@@ -47,17 +68,14 @@ public class CountValue : MonoBehaviour
         counterButton[ 9] = rootVisualElement.Q<Button>("DecMinFor");
         counterButton[10] = rootVisualElement.Q<Button>("IncMaxFor");
         counterButton[11] = rootVisualElement.Q<Button>("DecMaxFor");
-        counterButton[12] = rootVisualElement.Q<Button>("IncMinSiz");
-        counterButton[13] = rootVisualElement.Q<Button>("DecMinSiz");
-        //
-        // counterButton[14] = rootVisualElement.Q<Button>("DecMinST");
-        // counterButton[15] = rootVisualElement.Q<Button>("DecMinST");
-        //
+        // counterButton[12] = rootVisualElement.Q<Button>("IncMinSiz");
+        // counterButton[13] = rootVisualElement.Q<Button>("DecMinSiz");
+        counterButton[14] = rootVisualElement.Q<Button>("IncMaxSiz");
+        counterButton[15] = rootVisualElement.Q<Button>("DecMaxSiz");
         // counterButton[16] = rootVisualElement.Q<Button>("DecMinST");
         // counterButton[17] = rootVisualElement.Q<Button>("DecMinST");
-        //
-        // counterButton[18] = rootVisualElement.Q<Button>("DecMinST");
-        // counterButton[19] = rootVisualElement.Q<Button>("DecMinST");
+        counterButton[18] = rootVisualElement.Q<Button>("IncMaxTor");
+        counterButton[19] = rootVisualElement.Q<Button>("DecMaxTor");
         
         
         counterButton[ 0].RegisterCallback<ClickEvent>(ev => IncrementCounter(0));
@@ -72,48 +90,44 @@ public class CountValue : MonoBehaviour
         counterButton[ 9].RegisterCallback<ClickEvent>(ev => DecrementCounter(4));
         counterButton[10].RegisterCallback<ClickEvent>(ev => IncrementCounter(5));
         counterButton[11].RegisterCallback<ClickEvent>(ev => DecrementCounter(5));
-        counterButton[12].RegisterCallback<ClickEvent>(ev => IncrementCounter(6));
-        counterButton[13].RegisterCallback<ClickEvent>(ev => DecrementCounter(6));
-        //
-        // counterButton[14].RegisterCallback<ClickEvent>(ev => DecrementCounter(7));
-        // counterButton[15].RegisterCallback<ClickEvent>(ev => IncrementCounter(7));
-        //
+        // counterButton[12].RegisterCallback<ClickEvent>(ev => IncrementCounter(6));
+        // counterButton[13].RegisterCallback<ClickEvent>(ev => DecrementCounter(6));
+        counterButton[14].RegisterCallback<ClickEvent>(ev => IncrementCounter(7));
+        counterButton[15].RegisterCallback<ClickEvent>(ev => DecrementCounter(7));
         // counterButton[16].RegisterCallback<ClickEvent>(ev => DecrementCounter(8));
         // counterButton[17].RegisterCallback<ClickEvent>(ev => IncrementCounter(8));
-        //
-        // counterButton[18].RegisterCallback<ClickEvent>(ev => DecrementCounter(9));
-        // counterButton[19].RegisterCallback<ClickEvent>(ev => IncrementCounter(9));
+        counterButton[18].RegisterCallback<ClickEvent>(ev => IncrementCounter(9));
+        counterButton[19].RegisterCallback<ClickEvent>(ev => DecrementCounter(9));
         
     }
 
     
     private void IncrementCounter(int value)
     {
-        switch (value)
-        {
-            case 6:
-                count[(int)value] += 0.2f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._minSize = count[value];
-                LimitIncrement(value);
-                break;
-            case 8:
-                count[(int)value] += 0.1f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._minTorque = count[value];
-                LimitIncrement(value);
-                break;
-            case 9:
-                count[(int)value] += 0.1f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._maxTorque = count[value];
-                LimitIncrement(value);
-                break;
-        }
+        // switch (value)
+        // {
+        //     case 6:
+        //         count[(int)value] += 0.2f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._minSize = count[value];
+        //         LimitIncrement(value);
+        //         break;
+        //     case 8:
+        //         count[(int)value] += 0.1f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._minTorque = count[value];
+        //         LimitIncrement(value);
+        //         break;
+        //     case 9:
+        //         count[(int)value] += 0.1f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._maxTorque = count[value];
+        //         LimitIncrement(value);
+        //         break;
+        // }
 
-        if (value != 6 || value != 8 || value != 9)
+        if (value != 6 || value != 8)
         {
-                
             count[(int)value]++;
             counterLabels[(int)value].text = $"{count[(int)value]}";
             switch (value)
@@ -127,46 +141,38 @@ public class CountValue : MonoBehaviour
              // case 6: _mySo._minSize      = (int)count[(int)value]; LimitIncrement((int)value); break;
                 case 7: _mySo._maxSize      = (int)count[(int)value]; LimitIncrement((int)value); break;
              // case 8: _mySo._minTorque    = (int)count[(int)value]; LimitIncrement((int)value); break;
-             // case 9: _mySo._maxTorque    = (int)count[(int)value]; LimitIncrement((int)value); break;
+                case 9: _mySo._maxTorque    = (int)count[(int)value]; LimitIncrement((int)value); break;
                 default: Debug.Log("HAHA!");
                     break;
             }
-            // if (count[(int)value] >= 10)
-                    // {
-                    //     count[(int)value] = 10;
-                    //     counterLabels[(int)value].text = $"{count[(int)value]}";
-                    //     _mySo._minSpawnTime = count[(int)value];
-                    // }
         }
     }
 
     private void DecrementCounter(int value)
     {
-        switch (value)
-        {
-            case 6:
-                count[(int)value] -= 0.2f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._minSize = count[value];
-                LimitDecrement(value);
-                break;
-            case 8:
-                count[(int)value] -= 0.1f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._minTorque = count[value];
-                LimitDecrement(value);
-                break;
-            case 9:
-                count[(int)value] -= 0.1f;
-                counterLabels[(int)value].text = $"{count[(int)value]}";
-                _mySo._maxTorque = count[value];
-                LimitDecrement(value);
-                break;
-        }
+        // switch (value)
+        // {
+        //     case 6:
+        //         count[(int)value] -= 0.2f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._minSize = count[value];
+        //         LimitDecrement(value);
+        //         break;
+        //     case 8:
+        //         count[(int)value] -= 0.1f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._minTorque = count[value];
+        //         LimitDecrement(value);
+        //         break;
+        //     case 9:
+        //         count[(int)value] -= 0.1f;
+        //         counterLabels[(int)value].text = $"{count[(int)value]}";
+        //         _mySo._maxTorque = count[value];
+        //         LimitDecrement(value);
+        //         break;
+        // }
         
-        count[(int)value]--;
-        counterLabels[(int)value].text = $"{count[(int)value]}";
-        if (value != 6 || value != 8 || value != 9)
+        if (value != 6 || value != 8)
         {
             count[(int)value]--;
             counterLabels[(int)value].text = $"{count[(int)value]}";
@@ -181,18 +187,11 @@ public class CountValue : MonoBehaviour
                 // case 6: _mySo._minSize      = (int)count[(int)value]; LimitDecrement((int)value); break;
                 case 7: _mySo._maxSize      = (int)count[(int)value]; LimitDecrement((int)value); break;
                 // case 8: _mySo._minTorque    = (int)count[(int)value]; LimitDecrement((int)value); break;
-                // case 9: _mySo._maxTorque    = (int)count[(int)value]; LimitDecrement((int)value); break;
+                case 9: _mySo._maxTorque    = (int)count[(int)value]; LimitDecrement((int)value); break;
                 default: Debug.Log("HAHA!");
                     break;
             }
         }
-        //_mySo._minSpawnTime = count[(int)value];
-        // if (count[(int)value] <= -1)
-        // {
-        //     count[(int)value] = 0;
-        //     counterLabels[(int)value].text = $"{count[(int)value]}";
-        //     _mySo._minSpawnTime = count[(int)value];
-        // }
     }
     private void LimitIncrement(int value)
     {
