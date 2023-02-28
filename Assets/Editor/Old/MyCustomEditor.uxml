@@ -1,0 +1,44 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/Old/StyleSheet.uss?fileID=7433441132597879392&amp;guid=d4f903725fbdb214e94a4236042d448c&amp;type=3#StyleSheet" />
+    <ui:VisualElement style="height: 1080px; width: 1920px; align-items: center; justify-content: flex-start; background-image: none;">
+        <ui:VisualElement name="Body" style="height: 1244px; width: 1917px;">
+            <ui:Label text="Pause Menu&#10;" display-tooltip-when-elided="true" name="MenuHeader" enable-rich-text="true" style="height: 96px; align-items: flex-start; justify-content: flex-start; font-size: 54px; -unity-text-align: upper-center; white-space: normal; -unity-font-style: bold; width: 1920px;" />
+            <ui:VisualElement name="ConfigAsteroidSpawner" style="height: 639px; font-size: 44px;">
+                <ui:Label text="Configure Asteroid Spawner" display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Spawn Time" value="42" high-value="100" name="MinSpawnTime" style="align-items: center; width: 1420px;">
+                    <ui:Label text="42" display-tooltip-when-elided="true" name="MinSpawnValue" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Max Spawn Time" value="42" high-value="100" name="MaxSpawnTime" style="align-items: center; width: 1409px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Min Amount" value="42" high-value="100" name="MinAmount" style="align-items: center; width: 1519px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Max Amount" value="42" high-value="100" name="MaxAmount" style="align-items: center; width: 1509px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+            </ui:VisualElement>
+            <ui:VisualElement name="ConfigAsteroid" style="height: 980px; font-size: 44px;">
+                <ui:Label text="Configure Asteroid " display-tooltip-when-elided="true" style="-unity-font-style: bold; font-size: 55px;" />
+                <ui:SliderInt picking-mode="Ignore" label="Min Force" value="42" high-value="100" name="MinForce" style="align-items: center; width: 1567px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Max Force" value="42" high-value="100" name="MaxForce" style="align-items: center; width: 1557px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Min Size" value="42" high-value="100" name="MinSize" style="align-items: center; width: 1603px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Max Size" value="42" high-value="100" name="MaxSize" style="align-items: center; width: 1593px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Min Torque" value="42" high-value="100" name="MinTorque" style="align-items: center; width: 1547px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+                <ui:SliderInt picking-mode="Ignore" label="Max Torque" value="42" high-value="100" name="MaxTorque" style="align-items: center; width: 1535px;">
+                    <ui:Label text="Label" display-tooltip-when-elided="true" />
+                </ui:SliderInt>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
